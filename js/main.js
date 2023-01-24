@@ -65,10 +65,6 @@ const display = async (user = inputValue) => {
 	const userData = await refinedFetchedData(user)
 
 	userData.message !== 'Not Found' ? rootElem.innerHTML = searchComponent(userData, display) : undefined
-
-	followerComponent(userData)
-	followingComponent(userData)
-	repoComponent(userData)
 	toggleSearchBtn()
 	responsive()
 }
