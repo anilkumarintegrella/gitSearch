@@ -1,5 +1,5 @@
 import searchComponent from './components/search-page.js'
-
+import repoComponent from './components/repo/repo-page.js'
 const methods = () => {
 	document.display = display
 	document.searchUser = searchUser
@@ -65,6 +65,7 @@ const display = async (user = inputValue) => {
 	const userData = await refinedFetchedData(user)
 
 	userData.message !== 'Not Found' ? rootElem.innerHTML = searchComponent(userData, display) : undefined
+	repoComponent(userData)
 	toggleSearchBtn()
 	responsive()
 }
