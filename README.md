@@ -17,17 +17,6 @@ Hosted On: << URL >>
 - You can run this project by using Live Server extention from VS Code
 
 ##### Github Rest API
-
-- https://docs.github.com/en/rest
-=======
-### How to run on local?
-
-- You can run this project by using Live Server extention from VS Code
-
-#### POC
-https://integrella-my.sharepoint.com/:f:/p/anilkumar_vaghari/EjNHT6jm_l9Ik4uQkjX5t3QBbKSvekjWGLgtFRYuZeIqKA?e=wKipo8
-
-##### Github Rest API
 https://docs.github.com/en/rest
 
 ###### Github Rest API Some Limitations:
