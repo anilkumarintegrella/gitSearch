@@ -6,7 +6,7 @@ Project DESC: Designed Dynamic Web Application using third party APIs (GitHub RE
 
 Tech Stack: HTML5, CSS3, JavaScript ES6+ only
 
-Hosted On: << URL >>
+Hosted On: https://gitsearchintegrella.netlify.app/
 
 Purpose of Building: To learn JavaScript, CSS, HTML, API Integration, design responsive UI
 
