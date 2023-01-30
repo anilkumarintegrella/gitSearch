@@ -8,6 +8,8 @@ Tech Stack: HTML5, CSS3, JavaScript ES6+ only
 
 Hosted On: << URL >>
 
+Purpose of Building: To learn JavaScript, CSS, HTML, API Integration, design responsive UI
+
 ### POC
 
 - https://integrella-my.sharepoint.com/:f:/p/anilkumar_vaghari/EjNHT6jm_l9Ik4uQkjX5t3QBbKSvekjWGLgtFRYuZeIqKA?e=wKipo8

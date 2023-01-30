@@ -162,6 +162,7 @@ main{
 #paginationCenter{
 	display: flex;
 	justify-content: center;
+	padding-top: 20px;
 }
 #user__info button span{
 	color: #0404ca;
