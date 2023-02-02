@@ -7,7 +7,6 @@ const methods = () => {
 
 const fetchData = async (user) => {
 	const data = await fetch(`https://api.github.com/users/${user}`)
-					.then(res => res)
 					.then(data => data.json())
 					.catch(err => console.log(err))
 
@@ -64,14 +63,14 @@ const display = async (user = inputValue) => {
 	const rootElem = document.querySelector('#root')
 	const userData = await refinedFetchedData(user)
 
-	userData.message !== 'Not Found' ? rootElem.innerHTML = searchComponent(userData, display) : undefined
+	userData.message !== 'Not Found' ? rootElem.innerHTML = searchComponent(userData, display) : alert("User Not Found")
 	repoComponent(userData)
 	toggleSearchBtn()
 	responsive()
 }
 
-display('ex')
+display()
 
 methods()
 
-document.addEventListener('keydown', e => event.key == "Enter" ? searchUser() : undefined, false);
+document.addEventListener('keyup', e => event.key == "Enter" ? searchUser() : undefined,false);
