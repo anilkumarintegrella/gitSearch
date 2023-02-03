@@ -37,10 +37,9 @@ const repoComponent = (userData, methods) => {
 			});
 		};
 
-		document.getElementById("searchInput").addEventListener("keydown", () => {
-			let newarr = searchRepo();
+		const dispPage = (disprepos) => {
 			let state = {
-				'repos': newarr,
+				'repos': disprepos,
 				'page': 1,
 				'rows': 10,
 				'window': 5
@@ -94,17 +93,17 @@ const repoComponent = (userData, methods) => {
 				}
 				for (let page = maxLeft; page <= maxRight; page++) {
 					wrapper.innerHTML += `<button value=${page} 
-					class="page ">${page}</button>`
+				class="page ">${page}</button>`
 				}
 
 				if (state.page != 1) {
 					wrapper.innerHTML = `<button value=${1} 
-					class="page ">&#171; First</button>` + wrapper.innerHTML
+				class="page ">&#171; First</button>` + wrapper.innerHTML
 				}
 
 				if (state.page != pages) {
 					wrapper.innerHTML += `<button value=${pages} 
-					class="page ">Last &#187;</button>`
+				class="page ">Last &#187;</button>`
 				}
 
 				repoContainer.innerHTML += wrapper.outerHTML;
@@ -128,6 +127,15 @@ const repoComponent = (userData, methods) => {
 			rootElem.append(repoContainer)
 
 			bindEvent()
+		}
+
+		let newarr = searchRepo();
+		dispPage(newarr)
+
+		document.getElementById("searchInput").addEventListener("keyup", () => {
+			newarr = searchRepo();
+			dispPage(newarr);
+
 		})
 	})
 
