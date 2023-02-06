@@ -79,6 +79,8 @@ main{
 	outline: none;
 }
 
+
+
 #search__container button{
 	color: #df098d;
 	background-color: transparent;
@@ -158,6 +160,7 @@ main{
 	text-decoration: none;
 	margin: 2px 2px ;
 	border-style: none;
+	border-radius: 5px;
 }
 #paginationCenter{
 	display: flex;

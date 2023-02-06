@@ -5,7 +5,6 @@ const repoItem = (repoData) => {
 		for(let props in newData){
 			newData[props] == '' || newData[props] == null ? newData[props] = 'N/A' : undefined
 		}
-	
 		return newData
 	}
 	

@@ -7,6 +7,7 @@ const repoComponent = (userData, methods) => {
 	let repos = [];
 
 	const fetchRepos = () => {
+		repoContainer.innerHTML = `<div class="loader">loading..</div>`;
 		return fetch(userData.repos_url)
 			.then(res => res.json())
 			.then(data => {
@@ -14,13 +15,12 @@ const repoComponent = (userData, methods) => {
 				return data;
 			});
 	};
-
 	repoBtn.addEventListener('click', async () => {
 		let results = await fetchRepos();
 		const rootElem = document.querySelector('#root');
 		rootElem.innerHTML = '';
 		rootElem.innerHTML = `<button id="back__btn" onclick="display()"><i class="fas fa-arrow-left"></i></button> ${userDetails(userData, results)}`;
-
+		repoContainer.innerHTML = "";
 
 		const searchRepo = () => {
 			const searchTerm = document.getElementById("searchInput").value.toLowerCase();
@@ -128,9 +128,16 @@ const repoComponent = (userData, methods) => {
 
 			bindEvent()
 		}
-
+		repoContainer.innerHTML = `<div class="loader"></div>`;
+		rootElem.append(repoContainer)
+		
 		let newarr = searchRepo();
-		dispPage(newarr)
+
+		let disp=()=>{
+			dispPage(newarr)
+		}
+
+		setTimeout(disp,2000)
 
 		document.getElementById("searchInput").addEventListener("keyup", () => {
 			newarr = searchRepo();
@@ -138,8 +145,6 @@ const repoComponent = (userData, methods) => {
 
 		})
 	})
-
-
 
 	// return repoComponent
 }

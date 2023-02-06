@@ -11,7 +11,8 @@ const userDetails = (userData, results) => {
 							<p>${userData.name}</p>
 						</div>
 					</div>
-					<div>
+					<div id="searchrepo__container">
+						<i class="fas fa-search"></i>
 						<input type="text" id="searchInput" placeholder="Enter repo name">
 					</div>
 					<div id="repo__user-count">
