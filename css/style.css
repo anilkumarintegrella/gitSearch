@@ -44,7 +44,6 @@ main{
 #search__page{
 	display: flex;
 	flex-direction: column;
-	margin: auto 0;
 }
 
 #search__section{
@@ -55,13 +54,14 @@ main{
 }
 
 #search__container{
-	width: 70%;
+	width: 85%;
 	padding: 5px 20px;
 	border: 1px solid #d90086;
 	border-radius: 5px;
 	display: flex;
 	align-items: center;
 	box-shadow: -5px 5px 2px 0 rgba(0, 0, 0, 0.04);
+	margin: 0 0;
 }
 
 #search__container i{
@@ -73,7 +73,7 @@ main{
 #search__container input{
 	background-color: transparent;
 	flex: 5;
-	width: 50%;
+	width: 60%;
 	padding: 10px 10px;
 	border: none;
 	outline: none;
@@ -208,3 +208,58 @@ main{
 	padding: 10px;
 	font-size: 12px;
 }
+
+/*alert if user not found*/
+
+#alert-box {
+	width: 60%;
+	height: 500px;
+	margin: auto auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(181, 3, 101, 0.8);
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+	transition: all 5s ease-in-out;
+	opacity: 0.8;
+	border-radius: 10px;
+  }
+  #alert-box p{
+	color: #fff;
+  }
+  #alert-box i{
+	display: block;
+	padding: 10px;
+	color: #fff;
+	font-size: 50px
+  }
+  .hidden {
+	visibility: hidden;
+	opacity: 0;
+  }
+  
+  #alert-message {
+	font-size: 36px;
+	margin-bottom: 20px;
+  }
+  
+  #close-btn {
+	padding: 10px 20px;
+	background-color: #fff;
+	color: #000;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 20px;
+  }
+  #close-btn:hover{
+	color: #e644a8;
+	background-color:black;
+  }

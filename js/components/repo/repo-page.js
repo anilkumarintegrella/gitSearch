@@ -8,13 +8,14 @@ const repoComponent = (userData, methods) => {
 
 	const fetchRepos = () => {
 		repoContainer.innerHTML = `<div class="loader">loading..</div>`;
-		return fetch(userData.repos_url)
+		return fetch(userData.repos_url+`?per_page=100`)
 			.then(res => res.json())
 			.then(data => {
 				repos = data;
 				return data;
 			});
 	};
+
 	repoBtn.addEventListener('click', async () => {
 		let results = await fetchRepos();
 		const rootElem = document.querySelector('#root');

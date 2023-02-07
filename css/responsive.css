@@ -4,9 +4,14 @@
 	}
 }
 
+@media (max-width: 450px) {
+	#search__container {
+		width: 80%;
+	}
+}
 @media (min-width: 600px) {
 	#searchrepo__container {
-		width: 300px;
+		width: 90%;
 	}
 
 	#search__container {
