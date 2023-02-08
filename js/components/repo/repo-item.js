@@ -3,6 +3,8 @@ const repoItem = (repoData) => {
 		let newData = repoData
 	
 		for(let props in newData){
+			// newData[props] == '' || newData[props] == null ? newData[props] = 'N/A' : undefined
+			newData[props] == 0 ? newData[props] = '0' : undefined
 			newData[props] == '' || newData[props] == null ? newData[props] = 'N/A' : undefined
 		}
 		return newData
@@ -19,8 +21,9 @@ const repoItem = (repoData) => {
 			}
 		}
 	
-		const repo = `
-					<div id="repo__component">
+		const repo = `<a href="${data.html_url}" target="_blank" >
+					  <div id="repo__component">
+						
 						<div id="repo__component-main">
 							<h3>${data.name}</h3>
 							<p>${shortDescription()}</p>
@@ -38,6 +41,7 @@ const repoItem = (repoData) => {
 							</div>
 						</div>
 					</div>
+					</a>
 		`
 	
 	// console.log(repoItem())
